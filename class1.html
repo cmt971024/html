@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
+<head> 
+    <meta charset="UTF-8"> <!--메타태그-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html class</title>
 </head>
 
 <body> 
     <!--header_top-->
-    <div class="header_top_wrap">
+    <div class="header_top_wrap"> <!--태그를 넣을 때에는 .<클래스명>-->
         <div class="header_top">
             <div class="icon"></div>
         </div>
@@ -20,7 +20,7 @@
         <div class="header">
             <div class="logo">logo here</div>
             <div class="gnb">
-                <div class="menu">memu1</div>
+                <div class="menu">memu1</div> <!-- 태그를 동시에 넣을 때에는 .<클래스명(번호가 필요할 땐 '$'넣기)>*n-->
                 <div class="menu">memu2</div>
                 <div class="menu">memu3</div>
             </div>
@@ -175,3 +175,19 @@
     </div>
 </body>
 </html>
+
+<!-- 
+    1. div는 영역 나누기 태그(의미X)
+    2. 태그의 두가지 요소(너비와 높이가 존재하는지 않는지의 여부)
+        block요소 : 하나의 태그가 끝까지 채워져 있는 태그(영역을 끝까지 잡는다.-> 블록 요소를 잡으면 다음 태그는 다음 블록에서 시작된다.)
+        inline요소 : 하나의 태그가 필요한 부분까지 채워져 있는 태그(영역을 필요한 만큼 잡는다. -> 인라인 요소를 잡으면 그 크기만큼 잡히기 때문에 다음 태그는 잡힌 크기 다음에서 시작된다.)
+    3.  제목태그 : <h1> ~ <h6> (h1~h6 순으로 우선순위가 높음)
+        로고는 무조건 h1 사용 -> 파일 하나당 한 번만 사용 가능(웹표준)
+        메인 타이틀은 h2 사용
+        아티클의 타이틀은 h3 사용
+        서브 타이틀 및 메뉴는 h4~h6 사용
+    4.  문단 태그 : p
+    5.  리스트 태그 : ul, ol로 구성 -> 자식으로  li태그가 필수(무조건 li만 올 수 있음)
+        ul은 순서 없는 리스트, ol은 순서 있는 리스트
+    6.  icon은 pontawesome 사이트 주로 활용
+-->
