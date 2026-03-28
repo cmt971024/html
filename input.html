@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fieldset</title>
+</head>
+<body>
+    <form action=""> <!--같은 요소끼리 논리적으로 묶어주는 요소-->
+        <fieldset> <!--테두리(시각적으로 묶어주는 요소)-->
+            <legend>로그인박스</legend> <!--테두리 타이틀 부여-->
+            <label for="ID">ID: </label> <!--input의 라벨 붙이기-->
+            <input type="text" id="ID" placeholder="ID"> <br/> 
+            <!--input
+            text : 일반 텍스트 입력
+            password : 비밀번호 입력(가려짐)
+            email : 이메일 형식 입력(유효성 검사 포함)
+            url : URL 입력
+            search : 검색 입력 필드
+            tel : 전화번호 입력
+            num : 숫자 입력(증감 버튼 포함)
+            range : 숫자 슬라이더로 값 선택
+            date : 날짜 선택
+            time : 시간 선택
+            datetime-local : 날짜 + 시간(로컬 기준)
+            month : 연도 + 월
+            week : 연도 + 주
+            file : 파일 업로드
+            checkbox : 체크박스(다중 선택)
+            radio : 라디오(단일 선택)
+            select : 드롭다운(input태그를 사용하지 않으며, select태그를 사용)
+            button : 일반 버튼
+            submit : 폼 제출 버튼
+            reset : 폼 초기화 버튼
+            image : 이미지 버튼(submit 역할)
+            hidden : 사용자에게 보이지 않는 값
+            color : 색상 선택기
+            -->
+            <label for="PW">PW: </label>
+            <input type="password" id="PW" placeholder="PW"> <br/>
+            <input type="submit" value="login"> <!--vlaue는 버튼 이름을 명시-->
+        </fieldset>
+    </form>
+</body>
+</html>
