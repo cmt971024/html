@@ -114,6 +114,9 @@
         .content-wrap>.content>section article>.image {
             /*section안의 모든 하위 article에 대해서 모두 적용*/
             height: 320px;
+            background-color: #ccc; /*background-color(bgc), #ccc(값) -> 요소의 배경색을 지정하는 속성*/
+            color: transparent; /*color(c), transparent(값) -> 요소의 글자 색상을 투명하게 만드는 속성*/
+            /* background-color #ccc와 color transparent를 함께 사용하여 '이미지'라는 텍스트 대신 회색 배경이 보이도록 설정 */
             background-repeat: no-repeat;
             /*background-repeat(br), no-repeat(nr) -> 배경 이미지가 반복되지 않도록 하는 속성*/
             background-position: center;
@@ -240,7 +243,7 @@
 
         .content-wrap.content2>.content.cnt2>header {
             background-image: url(./images/background_image.jpg);
-            background-size: 33.33% ; /*background-size(bs), 값1 값2 -> 배경 이미지가 요소의 크기에 맞게 조절되도록 하는 속성(값1은 가로 사이즈, 값2는 세로 사이즈(필요 없을 경우 기입 X)*/
+            background-size: 33.33% 100%; /*background-size(bs), 값1 값2 -> 배경 이미지가 요소의 크기에 맞게 조절되도록 하는 속성(값1은 가로 사이즈, 값2는 세로 사이즈(필요 없을 경우 기입 X)*/
             background-repeat: repeat-x;
             padding-top: 80px;
             /*padding-top(pt), 80px(값) -> 요소의 위쪽에 여백을 띄우는 속성*/
