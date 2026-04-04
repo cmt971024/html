@@ -26,6 +26,7 @@
             max-width: 1080px;
             margin: 0 auto;
             text-align: center;
+            background-image: url('./images/header_top_image.png');
         }
 
         .hdr-top-wrap>.hdr-top>i {
@@ -114,8 +115,10 @@
         .content-wrap>.content>section article>.image {
             /*section안의 모든 하위 article에 대해서 모두 적용*/
             height: 320px;
-            background-color: #ccc; /*background-color(bgc), #ccc(값) -> 요소의 배경색을 지정하는 속성*/
-            color: transparent; /*color(c), transparent(값) -> 요소의 글자 색상을 투명하게 만드는 속성*/
+            background-color: #ccc;
+            /*background-color(bgc), #ccc(값) -> 요소의 배경색을 지정하는 속성*/
+            color: transparent;
+            /*color(c), transparent(값) -> 요소의 글자 색상을 투명하게 만드는 속성*/
             /* background-color #ccc와 color transparent를 함께 사용하여 '이미지'라는 텍스트 대신 회색 배경이 보이도록 설정 */
             background-repeat: no-repeat;
             /*background-repeat(br), no-repeat(nr) -> 배경 이미지가 반복되지 않도록 하는 속성*/
@@ -243,7 +246,8 @@
 
         .content-wrap.content2>.content.cnt2>header {
             background-image: url(./images/background_image.jpg);
-            background-size: 33.33% 100%; /*background-size(bs), 값1 값2 -> 배경 이미지가 요소의 크기에 맞게 조절되도록 하는 속성(값1은 가로 사이즈, 값2는 세로 사이즈(필요 없을 경우 기입 X)*/
+            background-size: 33.33% 100%;
+            /*background-size(bs), 값1 값2 -> 배경 이미지가 요소의 크기에 맞게 조절되도록 하는 속성(값1은 가로 사이즈, 값2는 세로 사이즈(필요 없을 경우 기입 X)*/
             background-repeat: repeat-x;
             padding-top: 80px;
             /*padding-top(pt), 80px(값) -> 요소의 위쪽에 여백을 띄우는 속성*/
@@ -302,9 +306,11 @@
             height: 120px;
             margin-top: 20px;
         }
+
         .content-wrap.content2>.content.cnt2>section>article>.texts>button:hover {
             background-color: rgba(125, 125, 125);
         }
+
         .content-wrap.content2>.content.cnt2>section>article>.texts>button {
             line-height: 40px;
             width: calc(100% / 6 * 4);
@@ -312,8 +318,10 @@
             background-color: #212517;
             margin-top: 20px;
             color: #fff;
-            border-radius: 20px; /*border-radius(br), 20px(값) -> 요소의 모서리를 둥글게 만드는 속성*/
-            transition: background-color 0.3s; /*transition(t), background-color(bgc), 0.3s(값) -> 요소의 background-color 속성이 0.3초 동안 부드럽게 변화하도록 하는 속성(hover안에서는 사용 금지)*/
+            border-radius: 20px;
+            /*border-radius(br), 20px(값) -> 요소의 모서리를 둥글게 만드는 속성*/
+            transition: background-color 0.3s;
+            /*transition(t), background-color(bgc), 0.3s(값) -> 요소의 background-color 속성이 0.3초 동안 부드럽게 변화하도록 하는 속성(hover안에서는 사용 금지)*/
         }
 
         /* 콘텐츠3 */
@@ -331,14 +339,18 @@
             display: flex;
             column-gap: 20px;
         }
+
         .content-wrap.content3>.content.cnt3>section>article {
             width: 25%;
             height: 200px;
             overflow: hidden;
         }
-        .content-wrap.content3>.content.cnt3>section>article:hover>.texts{
+
+        .content-wrap.content3>.content.cnt3>section>article:hover>.texts {
             margin-top: -200px;
-        } /*hover(ho) -> 요소에 마우스를 올렸을 때 적용되는 선택자*/
+        }
+
+        /*hover(ho) -> 요소에 마우스를 올렸을 때 적용되는 선택자*/
 
         .content-wrap.content3>.content.cnt3>section>article:nth-of-type(1)>.image {
             height: 200px;
@@ -364,7 +376,8 @@
         .content-wrap.content3>.content.cnt3>section>article>.texts {
             color: #fff;
             background-color: rgba(51, 51, 51, 0.4);
-            transition: margin-top 0.5s; /*transition(t), margin-top(mt), 0.5s(값) -> 요소의 margin-top 속성이 0.5초 동안 부드럽게 변화하도록 하는 속성(hover안에서는 사용 금지)*/
+            transition: margin-top 0.5s;
+            /*transition(t), margin-top(mt), 0.5s(값) -> 요소의 margin-top 속성이 0.5초 동안 부드럽게 변화하도록 하는 속성(hover안에서는 사용 금지)*/
         }
 
         .content-wrap.content3>.content.cnt3>section>article>.texts>h3 {}
@@ -407,6 +420,22 @@
             line-height: 80px;
             text-align: center;
             font-size: 45px;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrap.content1>.content.cnt1>section>.art-top>article:nth-of-type(2) {
+                display: none;
+            }
+
+            .content-wrap.content1>.content.cnt1>section>.art-top>article {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hdr-top-wrap {
+                background-color: rgb(255, 0, 0);
+            }
         }
     </style>
     <title>20260328_exe3</title>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>christmas site</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* header-top */
+        .hdr-top-wrap {}
+        .hdr-top-wrap>.hdr-top {
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .hdr-top-wrap>.hdr-top>i {}
+
+        /* header */
+        .hdr-wrap {}
+        .hdr-wrap>.hdr {
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex
+        }
+        .hdr-wrap>.hdr>h1 {}
+        .hdr-wrap>.hdr>.gnb {
+            display: flex;
+        }
+        .hdr-wrap>.hdr>.gnb>li {}
+        .hdr-wrap>.hdr>.gnb>li>a {}
+
+        /*cnt 공통*/
+        .cnt-wrap {}
+        .content {
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+        .cnt-wrap>.content>header {}
+        .cnt-wrap>.content>header>h2 {}
+        .cnt-wrap>.content>header>h4 {}
+        .cnt-wrap>.content>section {
+            margin-top: 40px;
+        }
+        .cnt-wrap>.content>section>article {}
+        .cnt-wrap>.content>section>article>.image {}
+        .cnt-wrap>.content>section>article>.texts {}
+        .cnt-wrap>.content>section>article>.texts>h3 {}
+        .cnt-wrap>.content>section>article>.texts>h4 {}
+        .cnt-wrap>.content>section>article>.texts>p {}
+
+        /* cnt1 */
+        .cnt-wrap.cnt-wrap1 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1 {
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>header {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>header>h2 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>header>h4 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top {
+            display: flex;
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article {
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image.i1 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image.i2 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts>h3 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts>h4 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts>p {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts>.icons {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts>.icons>i {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom {
+            display: flex;
+            margin-top: 40px;
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article {
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i1 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i2 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i3 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts>h3 {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts>p {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts>.icons {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts>.icons>i {}
+
+        /* cnt2 */
+        .cnt-wrap.cnt-wrap2 {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2 {
+        }
+        .cnt-wrap.cnt-wrap2>.content.cnt2>header {
+            padding-top: 80px;
+            padding-bottom: 360px;
+            background-color: #f00;
+        }
+        .cnt-wrap.cnt-wrap2>.content.cnt2>header>h2 {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>header>h4 {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section {
+            margin-top: -320px;
+        }
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article {
+            display: flex
+        }
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.image {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>h3 {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>h4 {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>p {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>button {}
+
+        /* cnt3 */
+        .cnt-wrap.cnt-wrap3 {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3 {
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>header {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>header>h2 {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>header>h4 {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section {
+            display: flex;
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i1 {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i2 {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i3 {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i4 {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.texts {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.texts>h3 {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.texts>p {}
+
+        /* footer */
+        .ftr-wrap {}
+        .ftr-wrap>.ftr {
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            margin-top: 80px;
+            padding-top: 40px;
+            padding-bottom: 80px;
+            background-color: #f00;
+        }
+        .ftr-wrap>.ftr>h4 {}
+        .ftr-wrap>.ftr>address {}
+        .ftr-wrap>.ftr>.icons {}
+        .ftr-wrap>.ftr>.icons>i {}
+    </style>
+</head>
+
+<body>
+    <!--header-top-->
+    <div class="hdr-top-wrap">
+        <div class="hdr-top">
+            <i class="fa-solid fa-sleigh"></i>
+        </div>
+    </div>
+    <!--header-->
+    <div class="hdr-wrap">
+        <div class="hdr">
+            <h1>logo here</h1>
+            <ul class="gnb">
+                <li><a href="@">about</a></li>
+                <li><a href="@">news</a></li>
+                <li><a href="@">portfolio</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--cnt1-->
+    <div class="cnt-wrap cnt-wrap1">
+        <div class="content cnt1">
+            <header>
+                <h2>content title</h2>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+            </header>
+            <section>
+                <div class="art-top">
+                    <article>
+                        <div class="image i1">image</div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, necessitatibus voluptas
+                                quidem, esse explicabo perferendis nulla totam ea magni a doloremque ad praesentium
+                                reiciendis nisi sequi impedit ut dignissimos labore!</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image i2">image</div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, necessitatibus voluptas
+                                quidem, esse explicabo perferendis nulla totam ea magni a doloremque ad praesentium
+                                reiciendis nisi sequi impedit ut dignissimos labore!</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                    </article>
+                </div>
+                <div class="art-bottom">
+                    <article>
+                        <div class="image i1">image</div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dicta laudantium
+                                dignissimos odio atque nostrum soluta ducimus ut at, debitis illo mollitia autem a quod
+                                odit corporis temporibus omnis facere.</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image i2">image</div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dicta laudantium
+                                dignissimos odio atque nostrum soluta ducimus ut at, debitis illo mollitia autem a quod
+                                odit corporis temporibus omnis facere.</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image i3">image</div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dicta laudantium
+                                dignissimos odio atque nostrum soluta ducimus ut at, debitis illo mollitia autem a quod
+                                odit corporis temporibus omnis facere.</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--cnt2-->
+    <div class="cnt-wrap cnt-wrap2">
+        <div class="content cnt2">
+            <header>
+                <h2>content title</h2>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+            </header>
+            <section>
+                <article>
+                    <div class="image">image</div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <h4>Lorem ipsum dolor sit amet.</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quia exercitationem porro
+                            sed ipsam, consequatur assumenda optio accusamus nemo? Libero, saepe quis! Rem voluptatibus
+                            quas, modi tempore corrupti et est.</p>
+                        <button>button</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <!--cnt3-->
+    <div class="cnt-wrap cnt-wrap3">
+        <div class="content cnt3">
+            <header>
+                <h2>content title</h2>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+            </header>
+            <section>
+                <article>
+                    <div class="image i1">image</div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum culpa odio quod, provident quos
+                            sit minima consequuntur mollitia saepe veritatis dolore praesentium excepturi aperiam! Eum
+                            velit atque ipsam modi impedit.</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image i2">image</div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum culpa odio quod, provident quos
+                            sit minima consequuntur mollitia saepe veritatis dolore praesentium excepturi aperiam! Eum
+                            velit atque ipsam modi impedit.</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image i3">image</div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum culpa odio quod, provident quos
+                            sit minima consequuntur mollitia saepe veritatis dolore praesentium excepturi aperiam! Eum
+                            velit atque ipsam modi impedit.</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image i4">image</div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum culpa odio quod, provident quos
+                            sit minima consequuntur mollitia saepe veritatis dolore praesentium excepturi aperiam! Eum
+                            velit atque ipsam modi impedit.</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <!--ftr-->
+    <div class="ftr-wrap">
+        <div class="ftr">
+            <h4>logo here</h4>
+            <address>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id doloribus dignissimos autem, voluptas
+                velit architecto, quos fugit suscipit tempora cum quibusdam doloremque explicabo quisquam. Accusantium
+                beatae adipisci possimus inventore commodi?</address>
+            <div class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
