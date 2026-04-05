@@ -8,28 +8,47 @@
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <style>
+        /* 폰트(구글폰트 활용하기)*/
+        @import url('https://fonts.googleapis.com/css2?family=Amarante&family=Caramel&family=Delicious+Handrawn&family=Luckiest+Guy&display=swap'); /*family='폰트 이름' -> font-family로 활용(폰트 이름이 길어서 ':'표기가 있는 경우 ':'표시 전까지의 이름을 활용, 폰트 이름에 '+'가 들어간 경우 활용할 때 공백으로 변경)
+
         /* header-top */
-        .hdr-top-wrap {}
+        .hdr-top-wrap {
+            background-color: #212517;
+        }
         .hdr-top-wrap>.hdr-top {
             width: 80%;
             max-width: 1080px;
             margin: 0 auto;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            font-size: 35px;
         }
         .hdr-top-wrap>.hdr-top>i {}
 
         /* header */
-        .hdr-wrap {}
+        .hdr-wrap {
+            background-color: #a31f30;
+            color: #fff;
+        }
         .hdr-wrap>.hdr {
             width: 80%;
             max-width: 1080px;
             margin: 0 auto;
-            display: flex
+            display: flex;   
+            justify-content: space-between;
+            line-height: 80px;
+            font-family: 'Amarante'; /*font-family(ff) : 활용하고자 하는 폰트 사용*/
         }
-        .hdr-wrap>.hdr>h1 {}
+        .hdr-wrap>.hdr>h1 {
+            font-size: 25px;
+        }
         .hdr-wrap>.hdr>.gnb {
             display: flex;
+            column-gap: 20px;
+            font-size: 20px;
         }
-        .hdr-wrap>.hdr>.gnb>li {}
+        .hdr-wrap>.hdr>.gnb>li {} 
         .hdr-wrap>.hdr>.gnb>li>a {}
 
         /*cnt 공통*/
@@ -40,20 +59,62 @@
             margin: 0 auto;
             margin-top: 80px;
         }
-        .cnt-wrap>.content>header {}
-        .cnt-wrap>.content>header>h2 {}
-        .cnt-wrap>.content>header>h4 {}
+        .cnt-wrap>.content>header {
+            font-family: 'Caramel';
+        }
+        .cnt-wrap>.content>header>h2 {
+            line-height: 80px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700; /*font-weight(fw) : 폰트 굵기를 결정*/
+        }
+        .cnt-wrap>.content>header>h4 {
+            height: 40px;
+            line-height: 20px;
+            text-align: center;
+            overflow: hidden;
+            width: calc(100% / 12 * 6);
+            margin: 0 auto;
+            font-size: 12px;
+
+        }
         .cnt-wrap>.content>section {
             margin-top: 40px;
         }
         .cnt-wrap>.content>section>article {}
-        .cnt-wrap>.content>section>article>.image {}
+        .cnt-wrap>.content>section article>.image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: transparent;
+        }
         .cnt-wrap>.content>section>article>.texts {}
-        .cnt-wrap>.content>section>article>.texts>h3 {}
-        .cnt-wrap>.content>section>article>.texts>h4 {}
-        .cnt-wrap>.content>section>article>.texts>p {}
+        .cnt-wrap>.content>section article>.texts>h3 {
+            line-height: 40px;
+            font-size: 25px;
+            font-family: 'Caramel';
+            font-weight: 600;
+        }
+        .cnt-wrap>.content>section article>.texts>h4 {
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden; /*overflow: hidden을 사용하기 위해서는 height필요*/
+            font-size: 14px;
+            font-family: 'Delicious Handrawn';
+        }
+        .cnt-wrap>.content>section article>.texts>p {
+            height: 80px;
+            line-height: 20px;
+            overflow: hidden;
+            font-size: 12px;
+            font-family: 'Delicious Handrawn';
+        }
+        .cnt-wrap>.content>section article>.texts>.icons {
+            line-height: 40px;
+            font-size: 22px;
+        }
 
-        /* cnt1 */
+        /* cnt1 */ 
         .cnt-wrap.cnt-wrap1 {}
         .cnt-wrap.cnt-wrap1>.content.cnt1 {
         }
@@ -63,13 +124,26 @@
         .cnt-wrap.cnt-wrap1>.content.cnt1>section {}
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top {
             display: flex;
+            column-gap: 20px;
         }
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article {
+        .cnt-wrap.cnt-wrap1>.conte nt.cnt1>section>.art-top>article {
         }
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image {}
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image.i1 {}
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image.i2 {}
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image {
+            height: 320px;
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image.i1 {
+            background-image: url('./images/contents1_image1.png');
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.image.i2 {
+            background-image: url('./images/contents1_image2.png');
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: calc(100% / 6 * 0.5);
+            padding-right: calc(100% / 6 * 2);
+            border: 1px solid #d9d9d9;
+        }
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts>h3 {}
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts>h4 {}
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-top>article>.texts>p {}
@@ -78,42 +152,94 @@
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom {
             display: flex;
             margin-top: 40px;
+            column-gap: 20px;
         }
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article {
         }
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image {}
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i1 {}
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i2 {}
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i3 {}
-        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts {}
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image {
+            height: 320px;
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i1 {
+            background-image: url('./images/contents1_image3.png');
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i2 {
+            background-image: url('./images/contents1_image4.png');
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.image.i3 {
+            background-image: url('./images/contents1_image5.png');
+        }
+        .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts {
+            padding: 40px 20px; /*값1(위)  값2(좌우) -> 20px정도는 calc로 계산하지 않아도 깨지지 않음*/
+            border: 1px solid #d9d9d9;
+        }
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts>h3 {}
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts>p {}
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts>.icons {}
         .cnt-wrap.cnt-wrap1>.content.cnt1>section>.art-bottom>article>.texts>.icons>i {}
 
         /* cnt2 */
-        .cnt-wrap.cnt-wrap2 {}
+        .cnt-wrap.cnt-wrap2 {
+        }
         .cnt-wrap.cnt-wrap2>.content.cnt2 {
+            width: 100%; /*전체 창크기의 80%만 사용하여 콘텐츠를 보여주려고 했으나, 콘텐츠 2의 배경은 전체 창크기의 100%를 모두 사용하므로, 100%로 변경*/
+            max-width: none; /*기것 풀어줬는데, 최대 크기를 잡고 있으면 해당 크기만큼만 배경을 보여주므로, 최대 크기의 제한을 풀어줌*/
         }
         .cnt-wrap.cnt-wrap2>.content.cnt2>header {
             padding-top: 80px;
             padding-bottom: 360px;
-            background-color: #f00;
+            background-image: url('./images/background_image.jpg');
+            color: #fff;
+            background-size: 33.33% 100%;
+            background-repeat: repeat-x;
         }
         .cnt-wrap.cnt-wrap2>.content.cnt2>header>h2 {}
-        .cnt-wrap.cnt-wrap2>.content.cnt2>header>h4 {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>header>h4 {
+            width: calc(80% / 12 * 6); /*전체 창크기 만큼 콘텐츠를 보여주게끔 풀어놨으므로, 다시 80%만큼만을 잡아 나눠줘야 함*/
+            max-width: 520px; /*max-width의 제한을 없애줬으므로 모니터의 크기에 따라 크기가 달라질 수 있음 -> 최대 크기를 다시 잡아줘야 함*/
+        }
         .cnt-wrap.cnt-wrap2>.content.cnt2>section {
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
             margin-top: -320px;
         }
         .cnt-wrap.cnt-wrap2>.content.cnt2>section>article {
-            display: flex
+            display: flex;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
         }
-        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.image {}
-        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.image {
+            width: 50%;  
+            height: 440px;
+        }
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.image>video {
+            height: 100%;
+            object-fit: cover;
+        }
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts {
+            width: 50%;
+            text-align: center;
+            padding: 80px calc(100% / 12 * 1);
+            background-color: #fff;
+        }
         .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>h3 {}
         .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>h4 {}
-        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>p {}
-        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>button {}
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>p {
+            height: 120px;
+            margin-top: 20px;
+        }
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>button {
+            line-height: 40px;
+            margin-top: 20px;
+            width: calc(100% / 6 * 4); /* inline요소이므로 margin 0 auto를 사용하지 않아도 가운데 정렬이 됨*/
+            background-color: #212517;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+        .cnt-wrap.cnt-wrap2>.content.cnt2>section>article>.texts>button:hover {
+            background-color: #ccc;
+        }
 
         /* cnt3 */
         .cnt-wrap.cnt-wrap3 {}
@@ -124,19 +250,43 @@
         .cnt-wrap.cnt-wrap3>.content.cnt3>header>h4 {}
         .cnt-wrap.cnt-wrap3>.content.cnt3>section {
             display: flex;
+            column-gap: 20px;
         }
-        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article {}
-        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image {}
-        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i1 {}
-        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i2 {}
-        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i3 {}
-        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i4 {}
-        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.texts {}
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article {
+            height: 200px;
+            overflow: hidden;
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article:hover>.texts {
+            margin-top: -200px;
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image {
+            height: 200px;
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i1 {
+            background-image: url('./images/contents3_image1.png');
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i2 {
+            background-image: url('./images/contents3_image2.png');
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i3 {
+            background-image: url('./images/contents3_image3.png');
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.image.i4 {
+            background-image: url('./images/contents3_image4.png');
+        }
+        .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.texts {
+            padding: 40px 20px;
+            transition: margin-top 0.5s;
+            color: #fff;
+            background-color: rgba(51, 51, 51, 0.4);
+        }
         .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.texts>h3 {}
         .cnt-wrap.cnt-wrap3>.content.cnt3>section>article>.texts>p {}
 
         /* footer */
-        .ftr-wrap {}
+        .ftr-wrap {
+            background-color: #a31f30;
+        }
         .ftr-wrap>.ftr {
             width: 80%;
             max-width: 1080px;
@@ -144,11 +294,28 @@
             margin-top: 80px;
             padding-top: 40px;
             padding-bottom: 80px;
-            background-color: #f00;
+            text-align: center;
+            color: #fff; 
         }
-        .ftr-wrap>.ftr>h4 {}
-        .ftr-wrap>.ftr>address {}
-        .ftr-wrap>.ftr>.icons {}
+        .ftr-wrap>.ftr>h4 {
+            line-height: 80px;
+            font-size: 30px;
+            font-family: 'Amarante';
+        }
+        .ftr-wrap>.ftr>address {
+            height: 40px;
+            line-height: 20px;
+            overflow: hidden;
+            width : calc(100% / 12 * 8);
+            margin: 0 auto;
+            font-size: 12px;
+            font-family: 'Delicious Handrawn';
+        }
+        .ftr-wrap>.ftr>.icons {
+            margin-top: 20px;
+            line-height: 40px;
+            font-size: 40px;
+        }
         .ftr-wrap>.ftr>.icons>i {}
     </style>
 </head>
@@ -165,9 +332,9 @@
         <div class="hdr">
             <h1>logo here</h1>
             <ul class="gnb">
-                <li><a href="@">about</a></li>
-                <li><a href="@">news</a></li>
-                <li><a href="@">portfolio</a></li>
+                <li><a href="./index.html">about</a></li>
+                <li><a href="./index.html">news</a></li>
+                <li><a href="./index.html">portfolio</a></li>
             </ul>
         </div>
     </div>
@@ -176,7 +343,7 @@
         <div class="content cnt1">
             <header>
                 <h2>content title</h2>
-                <h4>Lorem ipsum dolor sit amet.</h4>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusamus fugit reiciendis quos ex eum officiis repellendus natus ratione! Fugiat itaque exercitationem eos iste alias soluta architecto magni ullam quasi.</h4>
             </header>
             <section>
                 <div class="art-top">
@@ -257,18 +424,18 @@
         <div class="content cnt2">
             <header>
                 <h2>content title</h2>
-                <h4>Lorem ipsum dolor sit amet.</h4>
+                <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi excepturi eum voluptates labore maiores reprehenderit quaerat, voluptatem nesciunt praesentium aliquam fugiat reiciendis atque. Architecto totam rerum, perspiciatis ullam sit voluptates?</h4>
             </header>
             <section>
                 <article>
-                    <div class="image">image</div>
+                    <div class="image"><video src='./images/contents2_video.mp4' autoplay muted loop></video></div>
                     <div class="texts">
                         <h3>segment title</h3>
                         <h4>Lorem ipsum dolor sit amet.</h4>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quia exercitationem porro
                             sed ipsam, consequatur assumenda optio accusamus nemo? Libero, saepe quis! Rem voluptatibus
                             quas, modi tempore corrupti et est.</p>
-                        <button>button</button>
+                        <button><a href="./index.html">button</a></button>
                     </div>
                 </article>
             </section>
@@ -279,7 +446,7 @@
         <div class="content cnt3">
             <header>
                 <h2>content title</h2>
-                <h4>Lorem ipsum dolor sit amet.</h4>
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, perferendis! Quas laudantium esse necessitatibus consequatur, unde, soluta saepe beatae similique fugit eum fugiat tempore, corporis dolorum doloribus architecto veritatis porro.</h4>
             </header>
             <section>
                 <article>
