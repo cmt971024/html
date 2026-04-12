@@ -13,7 +13,6 @@ body {
     width: 80%;
     max-width: 1080px;
     margin: 0 auto;
-    text-align: center;
     background-image: url('../images/header_top_image.png');
     background-repeat: repeat-x;
 
@@ -23,8 +22,10 @@ body {
     line-height: 40px;
     font-size: 35px;
     color: #fff;
+    animation: move 20s linear infinite;
+    /*infinite;는 무한 반복, forwards;는 애니메이션이 끝난 후 마지막 상태 유지, linear;는 일정한 속도로 애니메이션 실행 */
+    /* animation(ani): 애니메이션 이름, 애니메이션 지속 시간, 애니메이션 타이밍 함수, 애니메이션 지연 시간, 애니메이션 반복 횟수, 애니메이션 방향, 애니메이션 채우기 모드 */
 }
-
 
 /* header 영역 */
 .hdr-wrap {
@@ -55,8 +56,8 @@ body {
 }
 
 .hdr-wrap>header>ul>li:nth-of-type(4) {
-        display: none;
-    }
+    display: none;
+}
 
 .hdr-wrap>header>ul>li {}
 
@@ -257,11 +258,23 @@ body {
 
 .cnt2>section>article>.image {
     width: 50%;
+    background-image: url('../images/contents2_image.png');
+}
+
+.cnt2>section>article>.image>input {
+    display: none;
+}
+
+.cnt2>section>article>.image>input:checked+video {
+    opacity: 0;
+
 }
 
 .cnt2>section>article>.image>video {
     height: 100%;
     object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s; 
 }
 
 .cnt2>section>article>.texts {
@@ -396,7 +409,6 @@ body {
 
     /* 이 안에 값들이 가로사이즈 1024px 이하일 때 적용되는 사항(반응형)*/
     .hdr-top-wrap>.hdr-top {
-        text-align: right;
         max-width: 610px;
     }
 
@@ -512,10 +524,6 @@ body {
         /*display:flex;를 없애는 block*/
     }
 
-    .art-top>article>.image {
-        width: 381px;
-    }
-
     .art-top>article>.texts {
         display: none
     }
@@ -556,5 +564,19 @@ body {
     .hdr-wrap>header>ul>li:nth-of-type(4) {
         display: block;
     }
+}
 
+@keyframes move {
+    0% {
+        /* 0%시점일 때 적용되는 CSS */
+        margin-left: 0%;
+    }
+
+    50% {
+        margin-left: calc(100% - 43.75px);
+    }
+
+    100% {
+        margin-left: 0%;
+    }
 }
