@@ -54,6 +54,10 @@ body {
     font-size: 20px;
 }
 
+.hdr-wrap>header>ul>li:nth-of-type(4) {
+        display: none;
+    }
+
 .hdr-wrap>header>ul>li {}
 
 
@@ -277,6 +281,10 @@ body {
 
 .cnt2>section>article>.texts>p>span {}
 
+.cnt2>section>article>.texts>button:hover {
+    background-color: rgba(125, 125, 125);
+}
+
 .cnt2>section>article>.texts>button {
     line-height: 40px;
     width: calc(100% / 6 * 4);
@@ -287,6 +295,7 @@ body {
     text-transform: uppercase;
     border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 
@@ -388,6 +397,7 @@ body {
     /* 이 안에 값들이 가로사이즈 1024px 이하일 때 적용되는 사항(반응형)*/
     .hdr-top-wrap>.hdr-top {
         text-align: right;
+        max-width: 610px;
     }
 
     .art-top>article:nth-of-type(2) {
@@ -418,10 +428,6 @@ body {
 
     .cnt3>section>article:nth-of-type(4) {
         display: none;
-    }
-
-    .hdr-top-wrap>.hdr-top {
-        max-width: 610px;
     }
 
     .hdr-wrap>header {
@@ -479,12 +485,39 @@ body {
     .hdr-wrap>header {
         width: 90%;
         max-width: 381px;
-        display: none;
     }
 
     .cnt-wrap>.content {
         width: 90%;
         max-width: 381px;
+    }
+
+    .ftr-wrap>footer {
+        width: 90%;
+        max-width: 381px;
+    }
+
+    .art-btm {
+        display: none;
+    }
+
+    .art-top>article:nth-of-type(2) {
+        display: block;
+        /*display:none;에서 display:block;로 바꿔서 보이게 하는 것*/
+        margin-top: 20px;
+    }
+
+    .art-top {
+        display: block;
+        /*display:flex;를 없애는 block*/
+    }
+
+    .art-top>article>.image {
+        width: 381px;
+    }
+
+    .art-top>article>.texts {
+        display: none
     }
 
     .cnt-wrap>.content>header>h4 {
@@ -496,19 +529,6 @@ body {
         width: 100%;
     }
 
-    .art-top {
-        display: block; /*display:flex;를 없애는 block*/
-    }
-
-    .art-top>article:nth-of-type(2) {
-        display: block; /*display:none;에서 display:block;로 바꿔서 보이게 하는 것*/
-        margin-top: 20px;
-    }
-
-    .art-top>article>.texts {
-        display: none
-    }
-
     .cnt2>header {
         padding-bottom: 80px;
     }
@@ -516,19 +536,6 @@ body {
     .cnt2>section>article>.image {
         height: 240px;
     }
-
-    .art-btm {
-        display: none;
-    }
-
-    .ftr-wrap>footer {
-        width: 90%;
-        max-width: 381px;
-    }
-
-    
- 
-    
 
     .cnt3>section>article:nth-of-type(3) {
         display: block;
@@ -541,31 +548,13 @@ body {
     .cnt3>section {
         display: block;
     }
-    
-    .cnt-wrap>.content>header>h2 {
-        line-height: 40px;
-        font-size: 25px;
+
+    .hdr-wrap>header>ul>li {
+        display: none;
     }
 
-    .cnt-wrap>.content>section {
-        margin-top: 20px;
-    }
-    .cnt-wrap3 {
-        margin-top: 0px;
-    }
-    .cnt3>section>article {
-        margin-top: 40px;
+    .hdr-wrap>header>ul>li:nth-of-type(4) {
+        display: block;
     }
 
-    .ftr-wrap>footer>address {
-        line-height: 20px;
-        height: 80px;
-        width: 100%;
-    }
-
-    .ftr-wrap {
-        margin-top: 40px;
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
 }
